@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="input.css" rel="stylesheet">
+</head>
+<body class="flex justify-center items-center min-h-screen bg-gray-100">
+    <div class="border w-full max-w-4xl bg-white p-5 rounded-lg shadow-md">
+        <p class="text-3xl font-sans font-semibold tracking-wide mb-5 text-gray-800 ">
+            Expense Tracker          
+        </p>
+        <div class="space-y-3">
+            <form id="expense-form" action="" method="" onsubmit="submission()">
+                <input type="text" id="Expense_description" name="description" placeholder="Expense Description" 
+                    class="border border-gray-400 rounded-md py-2 px-3 focus:ring-2 focus:ring-blue-500 focus:outline-none font-sans w-full mb-2">
+            
+                <select id="category" name="category" 
+                    class="border border-gray-400 rounded-md w-full py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500 font-sans appearance-none mb-3">
+                    <option id="select-category" value="" disabled selected>Select Category</option>
+                    <option value="groceries">Groceries</option>
+                    <option value="rent">Rent</option>
+                    <option value="utilities">Utilities</option>
+                    <option value="transportation">Transportation</option>
+                    <option value="insurance">Insurance</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="entertainment">Entertainment</option>
+                    <option value="dining">Dining Out</option>
+                    <option value="education">Education</option>
+                    <option value="savings">Savings</option>
+                    <option value="investments">Investments</option>
+                    <option value="subscriptions">Subscriptions</option>
+                    <option value="clothing">Clothing</option>
+                    <option value="travel">Travel</option>
+                    <option value="personal-care">Personal Care</option>
+                    <option value="gifts">Gifts</option>
+                    <option value="donations">Donations</option>
+                    <option value="other">Other</option>
+                </select>
+            
+                <input type="text" id="Amount" name="amount" placeholder="Amount" 
+                    class="border border-gray-400 rounded-md py-2 px-3 focus:ring-2 focus:ring-blue-500 focus:outline-none font-sans w-full mb-3">
+            
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md mt-4 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Submit</button>
+            </form>
+            <p class="text-2xl font-sans font-semibold tracking-wide mb-5 text-gray-800 ">Expense Summary</p>
+            <table class="w-full border-collapse font-sans ">
+                <tr class=" bg-green-400">
+                    <th class="border-2 border-gray-300 text-white">Description</th>
+                    <th class="border-2 border-gray-300 text-white">Category</th>
+                    <th class="border-2 border-gray-300 text-white">Amount</th>
+                    
+                </tr>
+                <tbody id="libody">
+
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

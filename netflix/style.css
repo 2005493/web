@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+    background-color: black;
+}
+
+
+.main{
+    /* background-image: url(""); */
+    background-image: url("assets/images/bg.jpg");
+    height: 100vh;
+    /*  Ensures the image covers the entire area */
+    background-size: cover;
+    background-position: center ; /* Centers the image */
+    position: relative;
+    background-repeat: no-repeat ;
+    /* background-size: max(1200px,100vh); */
+}
+
+ .box{
+    height: 644vh;
+    width: 100%;
+    opacity: 0.70;
+    background-color: black;
+    position: absolute; 
+    /* we are adding this postion so that it doesnt creates an extra space
+    (diffent space for div for the nav bar and different space for the div box 
+    that is used to create the opacity for the image) */
+    top:0;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* max-width: 60vw; */
+    margin:auto;
+    margin-left: 30px;
+    height: 100px;
+    
+}
+nav img{
+    color: red;
+    width: 130px;
+    z-index: 10;
+    position:relative;
+
+}
+nav button{
+    position:relative;
+    z-index: 50;
+}
+nav button:nth-child(2){
+    margin-right: 30px;
+}
+.text{
+    position:relative;
+    font-size: large;
+    font-weight: bold;
+    height: 85%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    /* max-width: 800px; */
+    margin-left: 50px;
+    margin-right: 50px;
+    z-index: 20;
+
+    
+}
+.sepration{
+    height: 5px;
+    background-color: grey;
+    
+    /* position: relative; */
+}
+.btn{
+    position: relative;
+   padding: 0.25rem 1rem;
+   border-radius: 0.25rem;
+   border: 0;
+   font-size: 1rem;
+   font-weight: 200;
+   background-color: rgb(255, 255, 255);
+   margin-top: 7px;
+}
+.main input{
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    border: 1.5px solid black ;
+    font-size: 1rem;
+    font-weight: 200;
+    color: white;
+    background-color: rgba(25, 25, 25, 0.7);
+    
+
+}
+
+.btn-red{
+ background-color: rgb(229, 9, 20);
+ color: rgb(255, 255, 255);
+}
+.btn-red-sm{
+    background-color: rgb(229, 9, 20);
+    color: rgb(255, 255, 255);
+}
+.sec1{
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right:auto;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.text_for_sepration{
+    position: relative;
+    color: white;
+    
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+   
+    width: 48%;
+    margin-left:23px;
+
+    
+}
+.text_for_sepration h1{
+    font-size: 3rem;
+    font-weight: 900;
+}
+.text_for_sepration div{
+    font-size: 1.5rem;
+    font-weight: 500;
+    
+}
+.video_1
+{
+    position: relative;
+
+    color: white;
+    
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+   
+    width: 40%;
+    margin-left:23px;
+}
+.video_1 img{
+    width:100% ;
+    position: relative;
+    z-index: 10;
+}
+.video_1 video{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+  
+    
+    width: 90%;
+}
+
+/* for the section 2 */
+
+
+.sec2{
+    margin-top: 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right:auto;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.video_2
+{
+    position: relative;
+
+    color: white;
+    
+    font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+   
+    width: 40%;
+    margin-left:23px;
+}
+.video_2 img{
+    width:100% ;
+    position: relative;
+    z-index: 10;
+}
+.video_2 video{
+    position: absolute;
+    top: 30px;
+    left: 100px;
+  
+    
+    width: 50%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+     .video_1 {
+        width: 45%;
+    }
+}
+
+@media (max-width: 992px) {
+     .video_1 {
+        width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    nav img {
+        margin-bottom: 10px;
+    }
+    .text {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .text_for_sepration h1 {
+        font-size: 2rem;
+    }
+    .text_for_sepration div {
+        font-size: 1rem;
+    }
+    .btn {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+    .main input {
+        padding: 0.25rem 0.5rem;
+        font-size: 0.875rem;
+    }
+}

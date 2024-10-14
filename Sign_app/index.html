@@ -1,0 +1,144 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="bg-gray-100">
+    <div class="heading ">
+        <div
+            class="heading mt-10 flex justify-center items-center bg-gradient-to-r from-blue-600 via-blue-500 to-indigo-600 text-white py-6 px-10 rounded-lg shadow-lg">
+            <h1 class="text-5xl font-mono tracking-widest">SignCraft</h1>
+        </div>
+    </div>
+
+    <div class="choice flex justify-center items-center flex-col md:flex-row ">
+        <div class="color mt-2 flex justify-center items-center flex-col md:m-5">
+            <p class="text-2xl font-mono tracking-widest mb-4">Pick A Color</p>
+            <input id="colorPicker" type="color" class="border-2 border-black w-24 h-10 p-1 rounded-lg shadow-md">
+        </div>
+
+        <div class="background mt-2 flex justify-center items-center flex-col md:m-5">
+            <p class="text-2xl font-mono tracking-widest mb-4">Background</p>
+            <input id="canvasColor" type="color" class="border-2 border-black w-24 h-10 p-1 rounded-lg shadow-md">
+        </div>
+
+        <div class="fontSize mt-2 flex justify-center items-center flex-col md:m-5">
+            <p class="text-2xl font-mono tracking-widest mb-4">Font Size</p>
+            <select id="fontSize" class="border-2 border-black p-2 rounded-lg shadow-md">
+                <option class="border-2 border-black p-2" value="5">5px</option>
+                <option class="border-2 border-black p-2" value="10">10px</option>
+                <option class="border-2 border-black p-2" value="20">20px</option>
+                <option class="border-2 border-black p-2" value="30">30px</option>
+                <option class="border-2 border-black p-2" value="40">40px</option>
+                <option class="border-2 border-black p-2" value="50">50px</option>
+                <option class="border-2 border-black p-2" value="60">60px</option>
+            </select>
+        </div>
+
+       
+    </div>
+    <div class="mt-10 flex justify-center items-center">
+        <canvas id="myCanvas" class="border-2 border-black w-[80%] h-80 p-1 rounded-lg" width="600"
+            height="600"></canvas>
+    </div>
+
+    <div class=" mt-5 bottom flex justify-center items-center flex-col md:flex-row ">
+   
+            <button id="clearButton"
+                class="border-2 transition duration-300 ease-in-out  hover:bg-black hover:text-white hover:scale-105 border-black w-24 h-10 p-1 rounded-lg shadow-md text-2xl font-mono tracking-widest mb-4 md:mx-2 ">Clear</button>
+            <button id="saveButton"
+                class="border-2 transition duration-300 ease-in-out  hover:bg-black hover:text-white hover:scale-105 border-black w-5/12 h-10 p-1 rounded-lg shadow-md text-2xl font-mono tracking-widest mb-4 md:mx-2 w-40">Download</button>
+            <button id="retriveButton"
+                class="border-2 transition duration-300 ease-in-out  hover:bg-black hover:text-white hover:scale-105 border-black w-5/12 h-10 p-1 rounded-lg shadow-md text-2xl font-mono tracking-widest mb-4 md:mx-2 w-40">Upload</button>
+        </div>
+    </div>
+</body>
+
+<script>
+    // JavaScript to handle color changes and font size adjustments
+
+    const colorPicker = document.getElementById('colorPicker');
+    const canvasColor = document.getElementById('canvasColor');
+    const fontSizeSelector = document.getElementById('fontSize');
+    const myCanvas = document.getElementById('myCanvas');
+    const clearButton = document.getElementById('clearButton');
+    const saveButton = document.getElementById('saveButton');
+    const retrieveButton = document.getElementById('retrieveButton');
+    const ctx = myCanvas.getContext('2d');
+    const title = document.querySelector('h1');
+
+    let isDrawing = false;
+    let lastX = 0;
+    let lastY = 0;
+
+    // Set canvas background color
+    canvasColor.addEventListener('input', (event) => {
+        myCanvas.style.backgroundColor = event.target.value;
+    });
+
+    // Set drawing color
+    colorPicker.addEventListener('input', (event) => {
+        ctx.strokeStyle = event.target.value;
+        ctx.fillStyle = event.target.value;
+    });
+
+    myCanvas.addEventListener('mousedown', (event) => {
+        isDrawing = true;
+        lastX = event.offsetX;
+        lastY = event.offsetY;
+    });
+
+    myCanvas.addEventListener('mousemove', (event) => {
+        if (isDrawing) {
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(event.offsetX, event.offsetY);
+            ctx.stroke();
+            lastX = event.offsetX;
+            lastY = event.offsetY;
+        }
+    });
+
+    myCanvas.addEventListener('mouseup', () => {
+        isDrawing = false;
+    });
+
+    myCanvas.addEventListener('mouseout', () => {
+        isDrawing = false;
+    });
+
+    // Set font size
+    fontSizeSelector.addEventListener('change', (event) => {
+        const selectedSize = event.target.value;
+        title.style.fontSize = `${selectedSize}px`;
+    });
+
+    // Clear button
+    clearButton.addEventListener('click', () => {
+        ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+    });
+
+    // Download button
+    document.getElementById('downloadButton').addEventListener('click', () => {
+        const link = document.createElement('a');
+        link.href = myCanvas.toDataURL();
+        link.download = 'canvas-image.png';
+        link.click();
+    });
+
+    // Upload button
+    document.getElementById('uploadButton').addEventListener('click', () => {
+        // Implement file upload functionality as needed
+        alert('Upload functionality not implemented');
+    });
+
+</script>
+
+</html> 
+

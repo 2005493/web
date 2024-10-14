@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="navbar flex justify-between items-center border-2 border-red-200 p-2 ">
+        <div class="flex justify-center items-center md:hidden">
+            <div class="hamburger inline-block p-2 hover:cursor-pointer">
+                <div class="line h-0.5 w-6 my-1 bg-black "></div>
+                <div class="line h-0.5 w-6 my-1 bg-black"></div>
+                <div class="line h-0.5 w-6 my-1 bg-black"></div>
+
+            </div>
+            <div class="search md:hidden">searchIcon</div>
+        </div>
+        <div class="logo md:order-1 flex">
+            <Div>Microsoft</Div>
+            <div class="features hidden  mx-3 space-x-2 md:flex">
+                <div class="fitems">Microsoft 365 </div>
+                <div class="fitems">Office</div>
+                <div class="fitems">Windows</div>
+                <div class="fitems">Surface</div>
+                <div class="fitems">Xbox</div>
+                <div class="fitems">Support</div>
+            </div>
+        </div>
+        <div class="cart md:order-3 flex">
+            <div class="acc_and_cart">Cart Account</div>
+            <div class="search hidden md:block">searchIcon</div>
+        </div>
+    </div>
+    <div class="slider flex flex-col-reverse md:flex-row shadow-md md:relative">
+        <div class="left flex flex-col justify-center  bg-[#fff] mx-6 mt-4 md:absolute z-10 bg-transparent top-[15%] left-20">
+            <h1 class="text-2xl mb-3 font-medium">Meet Surface Laptop</h1>
+            <p class="w-[85%] md:w-[40%] lg:w-[50%] xl:w-[60%] ">Unlock AI features like Live Captions and Cocreator with this exceptionally powerful laptop</p>
+            <button class="bg-[#0067b8] p-2 w-28 h-11 mt-5 mb-5 text-white font-medium">Learn More</button>
+
+
+        </div>
+        <div class="right  h-full flex items-center md:relative ">
+            <img class="object-contain md:hidden" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-AI-7Ed-Sapphire-MC001-3000x1682:VP3-1083x600" alt="Microsoft Surface Laptop AI" >
+            <img class=" hidden md:block w-full h-full" src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Laptop-AI-7Ed-Sapphire-MC001-3000x1682:VP4-1399x600"
+        </div>
+    </div>
+
+</body>
+
+</html>

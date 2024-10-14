@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Linking external CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="p-1 m-0 box-sizing:border-box">
+    <!-- Navigation bar -->
+    <nav class="flex justify-between m-4">
+        <!-- Logo section -->
+        <div class="logo">
+            <img src="images/logo.svg" alt="30daycoding">
+        </div>
+
+        <!-- Navigation links with hover effects, hidden on smaller screens -->
+        <div class="mt-2 middle_item space-x-5 bg-[#F5F5F5] rounded-full hidden md:flex flex-row justify-center items-center">
+            <!-- Intro link -->
+            <div class="hover:bg-white hover:text-red-400 transition duration-300 ease-in-out rounded-full p-2">
+                <a class="text-gray-500 font-sans font-semibold text-sm" href="#">Intro</a>
+            </div>
+            <!-- Pricing link -->
+            <div class="hover:bg-white hover:text-red-400 transition duration-300 ease-in-out p-2 rounded-full">
+                <a class="text-gray-500 font-sans font-semibold text-sm" href="#">Pricing</a>
+            </div>
+            <!-- Features link -->
+            <div class="hover:bg-white hover:text-red-400 transition duration-300 ease-in-out p-2 rounded-full">
+                <a class="text-gray-500 font-sans font-semibold text-sm" href="#">Features</a>
+            </div>
+            <!-- Testimonials link -->
+            <div class="hover:bg-white hover:text-red-400 transition duration-300 ease-in-out p-2 rounded-full">
+                <a class="text-gray-500 font-sans font-semibold text-sm" href="#">Testimonials</a>
+            </div>
+        </div>
+
+        <!-- Join Community button -->
+        <div class="mt-2 rounded-full bg-black text-white px-4 py-2.5 text-sm font-semibold flex justify-center items-center hover:bg-green-500">
+            <a href="#">Join Community</a>
+        </div>
+    </nav>
+
+    <!-- Hero section with headline and image -->
+    <section class="mt-14 px-4 lg:flex lg:flex-row">
+        <!-- Text content on the left side -->
+        <div class="flex flex-col items-center text-center lg:items-start lg:text-left lg:mt-36 lg:mr-36">
+            <span class="text-7xl font-sans font-bold text-green-500 md:text-8xl lg:text-6xl 2xl:text-[7rem]">ATTEND LIVE</span>
+            <span class="text-7xl font-sans font-bold md:text-8xl lg:text-6xl 2xl:text-8xl">CLASSES EVERY WEEK</span>
+            <p class="text-gray-500 font-sans text-xl font-semibold mt-5">
+                Join founders, freelancers, designers, FAANG engineers, indie hackers, and more in our 24/7 WhatsApp Group for less than a cup of coffee.
+            </p>
+            <!-- CTA button -->
+            <div class="mt-10 rounded-full bg-green-500 text-white px-8 py-5 text-[1rem] font-bold flex justify-center items-center hover:bg-green-800">
+                <a href="#">Join 24/7 Whatsapp + discord for $5/month</a>
+            </div>
+        </div>
+
+        <!-- Image on the right side -->
+        <div class="img mt-10 flex lg:shrink-0">
+            <img class="w-full lg:max-w-xl" src="https://github.com/singh1aryan/nextjs-prisma-sql/assets/31454667/9009ac7b-b0fb-4083-9f22-193e56c10f1c" alt="AI Bootcamp">
+        </div>
+    </section>
+
+    <!-- Features section with icons and descriptions -->
+    <section class="mt-16 flex space-x-10 justify-center items-center flex-wrap">
+        <!-- Feature 1 -->
+        <div class="flex shrink-0 space-x-4 justify-center items-center m-5">
+            <img class="w-8 h-8" src="images/icon-guides.svg" alt="">
+            <span class="font-sans font-semibold">5+ Guides For Free</span>
+        </div>
+        <!-- Feature 2 -->
+        <div class="flex shrink-0 space-x-4 justify-center items-center m-5">
+            <img class="w-8 h-8" src="images/icon-courses.svg" alt="">
+            <span class="font-sans font-semibold">Exclusive Courses & Projects</span>
+        </div>
+        <!-- Feature 3 -->
+        <div class="flex shrink-0 space-x-4 justify-center items-center m-5">
+            <img class="w-8 h-8" src="images/icon-whatsapp.svg" alt="">
+            <span class="font-sans font-semibold">24/7 WhatsApp Support Group</span>
+        </div>
+        <!-- Feature 4 -->
+        <div class="flex shrink-0 space-x-4 justify-center items-center m-5">
+            <img class="w-8 h-8" src="images/icon-sessions.svg" alt="">
+            <span class="font-sans font-semibold">1:1 Free Session</span>
+        </div>
+    </section>
+
+    <!-- Testimonials section -->
+    <section class="py-12 bg-white sm:py-16 xl:py-24 lg:py-20 flex flex-col justify-center items-center mt-[5rem] space-y-16 lg:flex-row lg:space-x-3 lg:space-y-0 lg:justify-around">
+        <!-- Testimonial 1 -->
+        <div class="flex flex-col justify-center items-center text-center shrink-0 max-w-md mx-auto space-y-1 lg:w-[20rem] lg:mx-0">
+            <div class="group">
+                <!-- Hover effect on avatar image -->
+                <img class="w-32 object-cover transition-all duration-200 group-hover:scale-125" src="images/avatars/avatar-aryan.webp">
+            </div>
+            <br>
+            <span class="font-sans text-xl">
+                "This community has been a game-changer for my career. The exclusive courses and personalized guidance from expert mentors have helped me take my coding skills to the next level."
+            </span>
+            <span class="font-sans text-xl font-semibold">Aryan Singh</span>
+            <span class="border font-sans text-xl">SWE at Google</span>
+
+            <!-- Star rating -->
+            <div class="flex space-x-1">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="flex flex-col justify-center items-center text-center shrink-0 max-w-md mx-auto space-y-1 lg:w-[20rem] lg:mx-0">
+            <div class="group rounded-full overflow-hidden">
+                <!-- Hover effect on avatar image -->
+                <img class="w-32 object-cover transition-all duration-200 group-hover:scale-125" src="images/avatars/avatar-kevin.webp">
+            </div>
+            <br>
+            <span class="font-sans text-xl">
+                "The exclusive courses and bi-weekly live sessions have been incredibly insightful, and collaborating on open-source projects has been a great way to build my portfolio. I highly recommend this community."
+            </span>
+            <span class="font-sans text-xl font-semibold">Kevin Smith</span>
+            <span class="font-sans text-xl">SWE at Tesla</span>
+            <!-- Star rating -->
+            <div class="flex space-x-1">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="flex flex-col justify-center items-center text-center shrink-0 space-y-1 max-w-md mx-auto lg:w-[20rem] lg:mx-0">
+            <div class="group rounded-full overflow-hidden">
+                <!-- Hover effect on avatar image -->
+                <img class="w-32 object-cover transition-all duration-200 group-hover:scale-125" src="images/avatars/avatar-umang.webp">
+            </div>
+            <br>
+            <span class="font-sans text-xl">
+                "Joining this community was one of the best decisions I've made for my career. The 24/7 WhatsApp group has been an amazing resource for real-time feedback and advice."
+            </span>
+            <span class="font-sans text-xl font-semibold">Umang Goel</span>
+            <span class="font-sans text-xl">SWE at Facebook</span>
+
+            <!-- Star rating -->
+            <div class="flex space-x-1">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+                <img class="w-6 h-6" src="images/icon-star.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <section mt-5>
+        <div class="border border-gray-600 p-7 mt-10 rounded-xl mx-auto max-w-xl lg:max-w-5xl lg:flex flex-auto space-x-2 lg:pr-2 lg:p-0 ">
+            <div class="firstbox lg:p-7">
+                <div class="text-xl  font-bold font-sans flex justify-start items-center ">Premium Elite Subscription</div>
+                <div class="mt-5 font-sans flex justify-start items-center text-gray-500 ">Join founders, freelancers,
+                    designers, FAANG engineers, indie hackers, and more in our 24/7 WhatsApp Group for less than a cup of
+                    coffee.</div>
+    
+                <div class="mt-10 flex items-center gap-x-3 ">
+                    <span class="text-green-500 text-sm font-sans font-bold">What's included</span>
+                    <div class="border flex-auto border-gray-300 h-px "></div>
+                </div>
+                <div class="mt-5">
+    
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <li class="flex items-center"><img src="images/icon-check.svg" class="w-6 h-10 mr-2">Expert Mentors
+                        </li>
+                        <li class="flex items-center"><img src="images/icon-check.svg" class="w-6 h-10 mr-2">Exclusive
+                            Courses</li>
+                        <li class="flex items-center"><img src="images/icon-check.svg" class="w-6 h-10 mr-2">Networking &
+                            collaboration</li>
+                        <li class="flex items-center"><img src="images/icon-check.svg" class="w-6 h-10 mr-2">Career guidance
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="secondbox"></div>
+            <!-- 2nd box inside the container -->
+            <div
+                class="mt-8 bg-[#fafaf9] border border-gray-300 flex flex-col justify-center items-center p-10 rounded-2xl  lg:w-[50rem] lg:m-2">
+                <p class="font-sans font-bold text-[#65625c] text-xl tracking-wide">Less than a cup of coffee</p>
+                <div class="flex gap-x-1 text-5xl font-sans m-5">
+                    <p class="font-semibold">$5</p>
+                    <p class="line-through text-[#a9a29e] font-semibold">$1000</p>
+                </div>
+                <button
+                    class="bg-[#65C51C]
+                    rounded-full w-[12rem] h-12 text-white font-sans font-bold text-center m-5 transition-all duration-100 ease-in hover:bg-green-600 ">Join
+                    Community</button>
+                <div class="-space-x-2 flex transition-all overflow-hidden ease-in-out  hover:-space-x-1 ">
+                    <!-- You need to declare -space-x-2 outside of hover because it sets the initial state of the spacing between the images. When you hover over the container, the hover:-space-x-1 class modifies this spacing. If you don't set the initial state with -space-x-2, the spacing between the elements will default to space-x-0 (no spacing), and the hover effect won't be as noticeable or may not work as intended. -->
+    
+    
+                    <!-- Images overlap because they are inline elements that naturally line up horizontally, and applying position: relative and z-index modifies their stacking order. -->
+                    <img src="images/avatars/avatar-aryan.webp" alt=""
+                        class=" overflow-hidden w-8 h-8 rounded-full ring-2 ring-white relative z-10 ">
+                    <img src="images/avatars/avatar-kevin.webp" alt=""
+                        class=" overflow-hidden w-8 h-8 rounded-full ring-2 ring-white relative z-20 -ml-2">
+                    <img src="images/avatars/avatar-umang.webp" alt=""
+                        class="overflow-hidden w-8 h-8 rounded-full ring-2 ring-white relative z-30 -ml-2">
+                    <img src="images/avatars/avatar-1.png" alt=""
+                        class="overflow-hidden w-8 h-8 rounded-full ring-2 ring-white relative z-40 -ml-2">
+                    <img src="images/avatars/avatar-2.png" alt=""
+                        class="overflow-hidden w-8 h-8 rounded-full ring-2 ring-white relative z-50 -ml-2">
+                </div>
+                <p class="font-sans font-bold text-[#65625c] text-xl tracking-wide mt-5">
+                    100+ Active Members
+                </p>
+            </div>
+        </div>
+    </div>
+    
+        
+    </section>
+
+    <section>
+        <div class="mt-16" >
+            <p class="font-sans text-5xl tracking-wide font-bold text-center">
+EVERYTHING YOU NEED IN
+
+            <p class="font-sans text-5xl tracking-wide font-bold text-center"> ONE COMMUNITY</p>   
+               
+            </p>
+            <p class="text-[#58544f] text-center font-sans mt-6">
+                Unleashing your digital potential for lasting success
+            </p>
+        </div>
+       
+    </section>
+    <!-- Footer section -->
+    <footer>
+        <!-- Placeholder for footer content -->
+    </footer>
+</body>
+
+</html>
